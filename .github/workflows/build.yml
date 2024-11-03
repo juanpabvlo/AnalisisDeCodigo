@@ -12,14 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 
+          fetch-depth: 0
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         with:
-          projectBaseDir: AnalisisEstatico 
+          projectBaseDir: AnalisisEstatico
+          args: |
+            -Dsonar.projectKey=juanpabvlo_AnalisisDeCodigo
+            -Dsonar.organization=juanpabvlo
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        args: >
-          -Dsonar.projectKey=juanpabvlo_AnalisisDeCodigo
-          -Dsonar.organization=juanpabvlo
