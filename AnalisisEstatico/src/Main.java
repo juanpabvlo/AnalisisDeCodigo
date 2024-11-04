@@ -11,7 +11,6 @@ public class Main {
         for (Libro libro : biblioteca.catalogo) {
             String x;
         }
-
         biblioteca.agregarLibro(libro2);
         biblioteca.agregarLibro(libro3);
 
